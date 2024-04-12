@@ -7,7 +7,8 @@ const screenNumbers = document.querySelector(".screen-numbers");
 const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
-    button.addEventListener('click', () => {
+    button.addEventListener('mousedown', (event) => {
+        event.preventDefault();
         let keyDown = new KeyboardEvent(`keydown`, {key: button.textContent});
         window.dispatchEvent(keyDown);
     });
