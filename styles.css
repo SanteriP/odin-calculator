@@ -55,6 +55,7 @@
     font-size: 6vh;
     font-weight: 500;
     background-color: rgb(172, 172, 172);
+    color: rgb(30,30,30);
     border: 1px solid black;
     box-shadow: black 2px 2px 1px 1px;
 }
