@@ -1,0 +1,35 @@
+#frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    max-height: 80vh;
+    aspect-ratio: 6 / 10;
+    width: auto;
+    max-width: 90vw;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: black -2px -2px 2px 2px inset,
+    black 0px 0px 2px 0px;
+    background: linear-gradient(grey, rgba(0,0,0,0.5));
+}
+
+#screen {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    width: 85%;
+    height: 15%;
+    margin-top: 10%;
+    border-radius: 3px;
+    border: 3px inset rgba(0,0,0,1);
+    background-color: rgba(255,255,255,0.9);
+}
+
+.screen-numbers {
+    font-family: monospace;
+    font-size: 6.65vh;
+    color: rgb(27, 27, 27);
+}
