@@ -3,9 +3,20 @@ let operand2 = "";
 operator = "";
 total = "";
 
-let screenNumbers = document.querySelector(".screen-numbers");
+const screenNumbers = document.querySelector(".screen-numbers");
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        let keyDown = new KeyboardEvent(`keydown`, {key: button.textContent});
+        window.dispatchEvent(keyDown);
+    });
+})
+
+
 
 addEventListener('keydown', (event) => {
+    console.log(event.key);
     if(total !== "") {
         total = "";
         console.log("Total reset");
@@ -63,7 +74,7 @@ addEventListener('keydown', (event) => {
         screenNumbers.textContent = operand1 + event.key;
     };
 
-    if(event.key === "Enter"
+    if((event.key === "Enter" || event.key === "=")
     && (operand1 !== "")
     && (operand2 !== "")) {
         total = operate(operator,+operand1,+operand2);
