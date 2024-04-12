@@ -1,7 +1,7 @@
 let operand1 = "";
 let operand2 = "";
-operator = "";
-total = "";
+let operator = "";
+let total = "";
 
 const screenNumbers = document.querySelector(".screen-numbers");
 const buttons = document.querySelectorAll("button");
@@ -17,7 +17,6 @@ buttons.forEach((button) => {
 
 
 addEventListener('keydown', (event) => {
-    console.log(event.key);
     if(total !== "") {
         total = "";
         console.log("Total reset");
@@ -30,10 +29,10 @@ addEventListener('keydown', (event) => {
     }
 
     if(event.key === "Backspace" && operand2 !== "") {
-        operand2 = operand2.slice(0,-1);
-        if (operand1.length > 0) {
+        if (operand2.length > 0) {
             screenNumbers.textContent = screenNumbers.textContent.slice(0,-1);
         }
+        operand2 = operand2.slice(0,-1);
     }
 
 
