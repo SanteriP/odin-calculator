@@ -38,7 +38,7 @@
 #buttons {
     display: flex;
     width: 85%;
-    height: 73%;
+    height: 67%;
     gap: 5%;
 }
 
@@ -50,7 +50,7 @@
     gap: 5%;
 }
 
-#operands > button, #operators > button {
+button {
     font-family: monospace;
     font-size: 6vh;
     font-weight: 500;
@@ -60,7 +60,21 @@
     box-shadow: black 2px 2px 1px 1px;
 }
 
-#operands > button:hover, #operators > button:hover {
+button.clear {
+    font-size: 1.5vh;
+    font-weight: 800;
+    background-color: red;
+    width: 15%;
+    height: 4%;
+    align-self: flex-end;
+    margin-right:11%;
+}
+
+button.clear:hover {
+    background-color: rgb(212, 0, 0);
+}
+
+button:hover {
     background-color: rgb(148, 148, 148);
     cursor: pointer;
 }
